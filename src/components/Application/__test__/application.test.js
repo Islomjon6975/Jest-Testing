@@ -37,6 +37,9 @@ describe('Application', () => {
     const imageElement = screen.getByAltText('a person with a laptop')
     expect(imageElement).toBeInTheDocument()
 
+    const spanElement = screen.getByTitle('close');
+    expect(spanElement).toBeInTheDocument()
+
     const bioElement = screen.getByRole('textbox', {
       name: 'Bio'
     })
