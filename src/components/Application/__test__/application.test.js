@@ -40,6 +40,9 @@ describe('Application', () => {
     const spanElement = screen.getByTitle('close');
     expect(spanElement).toBeInTheDocument()
 
+    const divElement = screen.getByTestId('custom-element');
+    expect(divElement).toBeInTheDocument()
+
     const bioElement = screen.getByRole('textbox', {
       name: 'Bio'
     })
