@@ -1,14 +1,15 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export const Skills = (props) => {
-  const { skills } = props
+  const { skills } = props;
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoggedIn(true)
-  //   }, 1001)
-  // }, [])
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoggedIn(true)
+    }, 1001)
+  }, [])
+
   return (
     <>
       <ul>
@@ -21,6 +22,8 @@ export const Skills = (props) => {
       ) : (
         <button onClick={() => setIsLoggedIn(true)}>Login</button>
       )}
+
     </>
   )
+
 }
